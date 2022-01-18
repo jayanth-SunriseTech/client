@@ -1,0 +1,24 @@
+.helpPage{
+    padding-bottom: 50px;
+}
+
+.help-icon{
+    margin-top: 650px;
+    margin-left: 200px;
+}
+
+.call{
+    color: white;
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.help{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 18px;
+color: white;
+margin-left: 10px;
+}

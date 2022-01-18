@@ -1,0 +1,99 @@
+.add_liquidity_page{
+    background: #1c152f;
+  height: 100%;
+  box-shadow: 0px -6px 30px rgb(11 10 10) inset;
+  border: 1px solid;
+}
+
+.add__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add__liquidity{
+    background: #24213e;
+  border-radius: 10px; 
+  position: absolute;
+  width: 281px;
+  height: 482px;
+  top: 230px;
+}
+
+.inp__choose__1{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.liquidity__navbar{
+    display: flex;
+  margin-top: 25px;
+}
+
+.liquidity__nav_3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.back__icon{
+    color: #9a6aff;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.liq_nav__title{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+margin-top: -2px;
+}
+
+.liq__tagline{
+    width: 120px;
+    display: inline-block;
+    margin: 0px 0px 0px 36px;
+    padding: 5px 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #706d89;
+}
+
+.plus-icon{
+    width: 7px !important;
+    height: 7px !important;
+}
+
+.inp__title__1{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.inp__title__1:hover{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.tokenlogo{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.currInput{
+    cursor: pointer;
+}
+
+.tokenSelected,.tokenBalance{
+    color: white;
+}

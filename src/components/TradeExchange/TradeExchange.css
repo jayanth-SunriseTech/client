@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.trade__exchange_page {
+  background: #1c152f;
+  height: 100%;
+  box-shadow: 0px -6px 30px rgb(11 10 10) inset;
+  border: 1px solid;
+}
+
+/* .title__btns {
+  padding-top: 134px;
+  padding-left: 630px;
+  padding-right: 732px;
+  display: flex;
+  position: relative;
+}
+
+.title__btns > button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #242372;
+}
+
+.exc-btn:focus{
+  color: #9a6aff;
+  border-bottom: 2px solid #9a6aff; 
+border-width: 50%;
+}
+
+.liq-btn:focus{
+  color: #9a6aff;
+  border-bottom: 2px solid #9a6aff; 
+}
+
+.exc-btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  margin-right: 12px;
+  font-family: "Poppins";
+  color: #9a6aff;
+  border-bottom: 2px solid #9a6aff; 
+border-width: 50%;
+}
+
+.liq-btn {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: -5px;
+} */
+
+/* .btn_border{
+    position: absolute;
+    border: 2px solid #9A6AFF;
+    border-radius: 31px;
+    margin-top: 35px;
+    margin-left: 30px;
+    width: 3.3%;
+    width: 45px;
+height: 0px;
+} */
+
+/* .exc-btn:after {
+  content: "";
+  display: block;
+  width: 50%;
+  margin-left: 25px;
+  border-bottom: 2px solid #9a6aff;
+  border-radius: 31px;
+  margin-top: 5px;
+} */
+
+.graph {
+  background: linear-gradient(
+    245.95deg,
+    rgba(80, 79, 142, 0.41) -0.9%,
+    rgba(80, 79, 142, 0.35) 100%
+  );
+  border-radius: 10px;
+  position: absolute;
+  width: 732px !important;
+  height: 482px;
+  left: 201px;
+  top: 180px;
+}
+
+.buy {
+  background: #24213e;
+  border-radius: 10px; 
+  position: absolute;
+  width: 281px;
+  height: 482px;
+  left: 973px;
+  top: 180px;
+}
+
+.buy__navbar {
+  display: flex;
+  margin-top: 20px;
+}
+
+.net {
+  width: 16px !important;
+  height: 14px !important;
+}
+
+.nav__title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+  padding-left: 53px;
+}
+
+.nav__settings,
+.nav__time {
+  color: #9a6aff;
+}
+
+.nav__time {
+  margin-left: -30px;
+}
+
+.nav__three {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buy__tagline {
+  display: inline-block;
+  margin: 10px 0px 0px 55px;
+  padding: 5px 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: #706d89;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #433772 !important;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+.trade__input{
+    margin-top: 25px;
+}
+.inp__icon__1 {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.inp__title__1 {
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.inp__choose__1 {
+  color: white;
+}
+
+.inp__1 {
+  text-align: end;
+  background: #1c152f;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 242px;
+  height: 50px;
+  display: block;
+  margin: 10px auto;
+}
+
+.inp__1::placeholder{
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+.ex-icon{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.trade__wallet{
+    background: #242372;
+    width: 242px;
+height: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+  margin: 40px auto;
+}
+
+.graph_box_header{
+    margin-top: 30px;
+    position: relative;
+}
+
+.expand{
+    position: absolute;
+  top: 8px;
+  right: 16px;
+  color: #9a6aff;
+}
+.graph_box_price_date{
+    margin-top: 10px;
+}
+
+.graph_header_title{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+color: white;
+margin-left: 10px;
+}
+
+.graph-exchange{
+    width: 24px !important;
+    height: 24px !important;
+    left: 0;
+    margin-right: 10px;
+}
+
+.graph_viewOption_active{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.14) 100%);
+border-radius: 4px;
+width: 64px;
+height: 27px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 18px;
+color: #9A6AFF;
+border: none;
+outline: none;
+}
+
+.graph_viewOption{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 18px;
+color: #9A6AFF;
+border: none;
+outline: none;
+background: none;
+}
+
+.btc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.btc > h2 {
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+color: white;
+}
+
+.btc-name{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+color: white;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.btc-status{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+color: #EC6B6B;;
+}
+
+.date{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 15px;
+color: #706D89;;
+}
+.range-picker{
+    display: flex;
+    align-content: flex-start;
+    align-items: inherit;
+    border: 2px solid #433772;
+box-sizing: border-box;
+border-radius: 35px;
+width: 202px;
+height: 33px;
+margin-right: 10px;
+padding: 0;
+}
+
+.range-picker > div >button {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+color: #FFFFFF;
+}
+
+.range-picker > div > div {
+ text-align: center;
+}
+
+.range-picker > div >button:active{
+    background: #9A6AFF;
+border-radius: 35px;
+}
