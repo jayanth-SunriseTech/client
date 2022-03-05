@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import { useDispatch, useSelector } from "react-redux";
 import { connectWallet } from "./redux/WalletAction";
 import TradeExchange from "./components/TradeExchange/TradeExchange";
@@ -10,6 +10,11 @@ import {
   } from "react-router-dom";
 import "./App.css";
 import AddLiquidity from "./components/AddLiquidity/AddLiquidity";
+import Home from './components/Home/Home'
+import { DataProvider } from "./components/ContextData";
+import Sample from "./components/Sample";
+import Add from "./components/AddLiquidity/Add";
+import FarmsTable from "./components/Farms/FarmsTable";
 
 const App = () => {
 
@@ -28,11 +33,15 @@ const App = () => {
             <div className="App">
                 <>
                 <BrowserRouter>
+                <DataProvider>
                 < Navbar />
                 <Routes>
-                <Route exact path="/add" element={<AddLiquidity/>}/>
+                <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/add" element={<Add/>}/>
                 <Route exact path="/swap" element={<TradeExchange/>}/>
+                <Route exact path="/farms" element={<FarmsTable/>}/>
                </Routes>
+               </DataProvider>
                </BrowserRouter>
                </>
 

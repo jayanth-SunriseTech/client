@@ -3,10 +3,12 @@ import { combineReducers } from "redux";
 import thunk from "redux-thunk";
 import {WalletConnect,activeNetwork} from "./Reducer";
 
+
 const rootReducer = combineReducers({
   WalletConnect,
   activeNetwork
 });
+
 
 const middleware = [thunk];
 const composeEnhancers = compose(applyMiddleware(...middleware));

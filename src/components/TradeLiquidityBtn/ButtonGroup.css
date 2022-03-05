@@ -68,6 +68,11 @@
   .active{
     text-decoration: none;
     background: none;
-color: #9a6aff !important;
-border-bottom: 2px solid #9a6aff;
+color: white !important;
+font-weight: bold !important;
+
+  }
+
+  .title__btns > a  {
+    color: #9a6aff !important;
   }

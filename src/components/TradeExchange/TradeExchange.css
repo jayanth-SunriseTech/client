@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .trade__exchange_page {
-  background: #1c152f;
-  height: 100%;
-  box-shadow: 0px -6px 30px rgb(11 10 10) inset;
-  border: 1px solid;
+ 
+  height: 90.6vh;
+  /* box-shadow: 0px -6px 30px rgb(11 10 10) inset;
+  border: 1px solid; */
 }
 
 /* .title__btns {
@@ -75,11 +75,13 @@ height: 0px;
 } */
 
 .graph {
-  background: linear-gradient(
+  /* background: linear-gradient(
     245.95deg,
     rgba(80, 79, 142, 0.41) -0.9%,
     rgba(80, 79, 142, 0.35) 100%
-  );
+  ); */
+  background: rgba(0, 209, 255, 0.1);
+  border: solid 1px #005f74;
   border-radius: 10px;
   position: absolute;
   width: 732px !important;
@@ -89,33 +91,41 @@ height: 0px;
 }
 
 .buy {
-  background: #24213e;
+  background: rgba(0, 209, 255, 0.1);
   border-radius: 10px; 
   position: absolute;
-  width: 281px;
+  width: 500px;
   height: 482px;
   left: 973px;
   top: 180px;
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+  border: solid 1px #00d1ff;
 }
 
 .buy__navbar {
   display: flex;
   margin-top: 20px;
+  justify-content: center;
+    align-items: center;
 }
 
 .net {
-  width: 16px !important;
-  height: 14px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
 .nav__title {
-  font-family: "Poppins";
+  font-family: 'Poppins';
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  color: white;
-  padding-left: 53px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: right;
+  color: #fff;
+  margin-left: 35%;
 }
 
 .nav__settings,
@@ -123,9 +133,7 @@ height: 0px;
   color: #9a6aff;
 }
 
-.nav__time {
-  margin-left: -30px;
-}
+
 
 .nav__three {
   display: flex;
@@ -154,6 +162,7 @@ hr {
 
 
 .trade__input{
+  /* background: #033a62; */
     margin-top: 25px;
 }
 .inp__icon__1 {
@@ -161,61 +170,113 @@ hr {
   height: 36px !important;
 }
 
-.inp__title__1 {
-  color: white;
-  font-family: "Poppins";
+
+
+.input_title{
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  margin-left: 15px;
-  margin-right: 10px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  margin-left: 8%;
+}
+.inp__title__1 {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding-right: -9%;
+  position: absolute;
+  top: 32%;
+  left: 85%;
+}
+.inp__title__2 {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: none !important;
+  outline: none !important;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none;
+  border: none !important;
+  cursor: pointer;
+  font-size: 20px;
+  padding-right: -9%;
+  position: absolute;
+  top: 60%;
+  left: 86%;
 }
 
 .inp__choose__1 {
   color: white;
+  margin-left: 2%;
 }
 
 .inp__1 {
-  text-align: end;
-  background: #1c152f;
+  text-align: start;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: none;
   outline: none;
-  width: 242px;
+  width: 95%;
   height: 50px;
   display: block;
   margin: 10px auto;
+  position: relative;
+  
 }
 
 .inp__1::placeholder{
-    font-weight: bold;
-    color: white;
-    margin-right: 10px;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #7993b0;
+   padding: 20px;
 }
 
-.ex-icon{
-    display: flex;
-    justify-content: end;
-    margin-right: 10px;
-    margin-top: 15px;
+.ex-icon {
+  display: flex;
+  justify-content: end;
+  margin-right: 232px;
+  height: 20px;
+  margin-top: -15px;
 }
 
-.trade__wallet{
-    background: #242372;
-    width: 242px;
-height: 40px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 15px;
-    color: white;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    display: block;
-  margin: 40px auto;
+.trade__wallet {
+  background: rgba(0, 209, 255, 0.1);
+  border: solid 1px #00d1ff;
+  width: 75%;
+  width: 1;
+  height: 53px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 15px;
+  color: #00d1ff;
+  outline: none;
+  border-radius: 10px;
+  display: block;
+  margin: 17px auto;
 }
 
 .graph_box_header{
@@ -244,8 +305,8 @@ margin-left: 10px;
 }
 
 .graph-exchange{
-    width: 24px !important;
-    height: 24px !important;
+    width: 50px !important;
+    height: 50px !important;
     left: 0;
     margin-right: 10px;
 }
@@ -287,20 +348,20 @@ background: none;
     font-family: Poppins;
 font-style: normal;
 font-weight: bold;
-font-size: 36px;
+font-size: 38px;
 line-height: 54px;
 color: white;
 }
 
-.btc-name{
-    font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 24px;
-color: white;
-margin-left: 10px;
-margin-right: 10px;
+.btc-name {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 24px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .btc-status{
@@ -313,12 +374,19 @@ color: #EC6B6B;;
 }
 
 .date{
-    font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 10px;
-line-height: 15px;
-color: #706D89;;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00d1ff;
+}
+
+.graph_date_span{
+  color: #fff !important;
 }
 .range-picker{
     display: flex;
@@ -352,4 +420,43 @@ color: #FFFFFF;
 .range-picker > div >button:active{
     background: #9A6AFF;
 border-radius: 35px;
+}
+
+
+.swapselectTokenIcon1 {
+  position: absolute;
+  top: 32.5%;
+  left: 64.5%;
+}
+.swapselectTokenIcon2 {
+  position: absolute;
+  top: 60.5%;
+  left: 65%;
+}
+
+.swapselectTokenName1 {
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  position: relative;
+  top: -51px;
+  left: 373px;
+  color: #fff;
+}
+.swapselectTokenName2 {
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  position: relative;
+  top: -50px;
+  left: 75%;
+  color: #fff;
 }

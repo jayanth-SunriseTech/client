@@ -1,0 +1,126 @@
+
+
+.nav_list_container li a{
+    color: white !important;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    margin-left: 1%;
+  width: 175px;
+}
+
+.pc_connect_btn{
+    background: rgba(0, 209, 255, 0.1) !important;
+    border: solid 1px #00d1ff !important;
+      width: 214px;
+  height: 50px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: bold; 
+      font-size: 10px;
+      line-height: 15px;
+      color: #00d1ff !important;
+      outline: none;
+      border-radius: 10px;
+      display: block;
+    margin: 40px auto;
+}
+
+.brand_title{
+    font-family: 'Poppins', sans-serif;
+    color: white !important;
+}
+
+
+.header__logo{
+    width: 135px;
+    height: 25px;
+  }
+
+
+
+  .displayChain_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      height: 55px;
+  }
+
+  .chainDropdown_icon{
+      color: rgb(180, 180, 180);
+  }
+
+  .displayChain span{
+      cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .connect_btn_mobile {
+      background: rgba(0, 209, 255, 0.1) !important;
+      border: solid 1px #00d1ff !important;
+      width: 66px;
+      height: 31px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px !important;
+      color: #00d1ff !important;
+      outline: none;
+      border-radius: 10px;
+      position: absolute;
+      margin: 2px auto;
+      left: 58%;
+      margin: 10px auto;
+  }
+
+    .displayChain_container {
+   display: grid !important;
+   grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      height: 35px;
+      flex-direction: column;
+    top: 90% !important;
+    left: 8% !important;
+    position: absolute;
+  width: 160px !important;
+}
+
+.chainIcon{
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.displayChain span {
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 15px !important;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+  }

@@ -1,23 +1,70 @@
 .add_liquidity_page{
-    background: #1c152f;
-  height: 100%;
-  box-shadow: 0px -6px 30px rgb(11 10 10) inset;
-  border: 1px solid;
+    background: radial-gradient(at bottom left rgba(136, 204, 170, 1),transparent 100px) !important;
+    /* background: #1c152f; */
+  height: 90.6vh;
+  /* box-shadow: 0px -6px 30px rgb(11 10 10) inset;
+  border: 1px solid; */
 }
 
-.add__box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* .add__box{
+    z-index: 99;
+    background:radial-gradient(circle at   right, rgb(129, 92, 146),transparent 300px) ; 
+     background: #1c152f;
+    height: 90.6vh;
+    border: 1px solid;
+} */
+
+.AddPage{
+    height: 100vh;
 }
 
 .add__liquidity{
-    background: #24213e;
-  border-radius: 10px; 
-  position: absolute;
+    z-index: 99;
+    background: rgba(0, 209, 255, 0.1);
+
+  position: relative;
   width: 281px;
-  height: 482px;
-  top: 230px;
+  height: auto;
+  top: 13%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+  border: solid 1px #00d1ff;
+}
+
+.addLiqCard{
+    z-index: 99;
+    background: rgba(0, 209, 255, 0.1) !important;
+
+  position: relative;
+  width: 650px;
+  height: auto;
+  top: 13%;
+  margin: 0 auto;
+  /* padding: 10px; */
+  border-radius: 20px !important;
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+  border: solid 1px #00d1ff !important;
+}
+
+.liq-card-header{
+    background: #044576 !important;
+    border-top-left-radius:20px !important ;
+    border-top-right-radius:20px !important;
+    width: 100%;
+    height: 50px;
+    padding: 10px !important;
+    font-family: 'Poppins';
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #fff;
 }
 
 .inp__choose__1{
@@ -74,20 +121,20 @@ margin-top: -2px;
 }
 
 .inp__title__1{
-    background: none;
-    border: none;
-    outline: none;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
 }
 
 .inp__title__1:hover{
-    background: none;
-    border: none;
-    outline: none;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
 }
 
 .tokenlogo{
-    width: 25px !important;
-    height: 25px !important;
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .currInput{
@@ -95,5 +142,413 @@ margin-top: -2px;
 }
 
 .tokenSelected,.tokenBalance{
+    color: #ffffff;
+}
+
+.inp__1{
+    color: #ffffff ;
+}
+
+.approve_btn{
+    background: rgba(0, 209, 255, 0.1);
+    border: solid 1px #00d1ff;
+    width: 242px;
+height: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
     color: white;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+  margin: 40px auto;
+}
+
+.supply__btn{
+    background: rgba(0, 209, 255, 0.1);
+    border: solid 1px #00d1ff;
+    width: 100%;
+height: 70px;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+  margin: 40px auto;
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00d1ff;
+}
+
+
+/* Add Page CSS */
+
+.liqinp__1 {
+    text-align: start;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    display: block;
+    /* margin: 10px auto; */
+    position: relative;
+    color: #fff !important;
+}
+
+
+.liqinp__1::placeholder{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #7993b0;
+     padding: 20px;
+  }
+
+
+  .liqinp__title__1 {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: -9%;
+    position: absolute;
+    top:19.5% ;
+    left:90%;
+  }
+
+  .liqinp__title__2 {
+    background: none !important;
+    outline: none !important;
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: none;
+    border: none !important;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: -9%;
+    position: absolute;
+    top:48.5% ;
+    left:90%;
+  }
+  
+
+  .liq-ex-icon {
+      cursor: pointer;
+    display: flex;
+    justify-content: end;
+    margin-right: 280px;
+    margin-top: 20px;
+  }
+
+  .liq_input_title{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    margin-left: 1%;
+  }
+
+  .liq_nav__time{
+      cursor: pointer;
+      position: absolute;
+      top: 0;;
+      left: 82%;
+  }
+
+  .Transaction_metadat_container{
+      margin-top: 3% !important;
+  }
+
+  .meta_left{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+  }
+  .meta_right{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+  }
+
+  .meta_left , .meta_right  span {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+
+    color: #bad1ea;
+  }
+
+.selectTokenIcon1{
+    position: absolute;
+    top: 20%;
+    left: 64.5%;
+}
+.selectTokenIcon2{
+    position: absolute;
+    top: 49%;
+    left: 65%;
+}
+
+.selectTokenName1{
+    font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+position: relative;
+top: -43px;
+left: 460px;
+  color: #fff;
+}
+.selectTokenName2{
+    font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  position: relative;
+  top: -40px;
+  left: 75%;
+  color: #fff;
+}
+
+/* Add Page CSS */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+   
+
+    .AddPage{
+        overflow-x: hidden;
+    }
+   
+    .addLiqCard{
+        z-index: 99;
+        background: rgba(0, 209, 255, 0.1) !important;
+    
+      position: relative;
+      width: 250px;
+      height: auto;
+      top: 13%;
+      margin: 0 auto;
+      margin-left: 12px !important;
+      /* padding: 10px; */
+      border-radius: 20px !important;
+      -webkit-filter: blur(0.3px);
+      filter: blur(0.3px);
+      border: solid 1px #00d1ff !important;
+    }
+
+    .liqinp__1 {
+        text-align: start;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 30px;
+        display: block;
+        /* margin: 10px auto; */
+        position: relative;
+        color: #fff !important;
+    }
+
+    .liq-card-header {
+        background: #044576 !important;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        width: 100%;
+        height: 50px;
+        padding: 15px !important;
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #fff;
+    }
+
+    .liq_nav__time {
+        width: 20px !important;
+        height: 20px !important;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 78%;
+    }
+
+    .liq_input_title {
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fff;
+        margin-left: 1%;
+    }
+
+
+    .selectTokenIcon1 {
+        position: absolute;
+        top: 26.5%;
+        left: 55.5%;
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .selectTokenIcon2{
+        position: absolute;
+        top: 52.3%;
+        left: 57%;
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .selectTokenName1 {
+        font-family: 'Poppins';
+        font-size: 10px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        position: relative;
+        top: -29px;
+        left: 147px;
+        color: #fff;
+    }
+    .selectTokenName2 {
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        position: relative;
+        top: -27px;
+        left: 70%;
+        color: #fff;
+    }
+    .liqinp__title__1 {
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.1);
+        outline: none;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-left: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        padding-right: -9%;
+        position: absolute;
+        top: 23.5%;
+        left: 80%;
+    }
+
+    .liqinp__title__2 {
+        background: none !important;
+        outline: none !important;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        color: #fff;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-left: none;
+        border: none !important;
+        cursor: pointer;
+        font-size: 20px;
+        padding-right: -9%;
+        position: absolute;
+        top: 49%;
+        left: 80%;
+    }
+
+    .meta_left , .meta_right  span {
+        font-family: 'Poppins';
+        font-size: 7px !important;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+    
+        color: #bad1ea;
+      }
+
+      .liq-ex-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        margin-right: 77px !important;
+        margin-top: -14px !important;
+    }
+
+    .supply__btn {
+        background: rgba(0, 209, 255, 0.1);
+        border: solid 1px #00d1ff;
+        width: 50% !important;
+        height: 30px !important;
+        outline: none;
+        border-radius: 10px;
+        display: block;
+        margin: 40px auto;
+        font-family: 'Poppins';
+        font-size: 14px;
+  
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        color: #00d1ff;
+    }
+
 }

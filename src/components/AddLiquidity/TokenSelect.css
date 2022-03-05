@@ -1,3 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+#tokenAddress{
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.modal-content{
+    background: #123e6e !important;
+}
+
+.modal-title{
+    color:#c5bfbf !important;
+}
+
+.list-group{
+    margin-top: 20px;
+}
+
+.list-group-item{
+    background: #123e6e !important;
+    color: rgb(153, 150, 150) !important;
+    height: 56px !important;
+}
 .token_select{
     overflow: hidden;
     background: rgb(39, 38, 44);
@@ -9,4 +37,83 @@
     z-index: 100;
     max-width: 420px;
     width: 100%;
+}
+
+.add_token_btn{
+    margin-top: 10px; 
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 7px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    color: white;
+    transition: background-color 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background: rgba(0, 209, 255, 0.1) !important;
+    border: solid 1px #00d1ff !important;
+    width: 100%;
+}
+.close {
+    color: #fff; 
+    opacity: 1;
+}
+
+.TokenSearchDetails{
+    display: flex;
+    flex-direction: column;
+    width: 60px !important;
+}
+
+.tokenSearchInput{
+    background-color: #202231;
+    height: 50px;
+    outline: none;
+    border: 0.5px solid #333;
+    color:#d9d6d6
+}
+
+.tokenSearchInput:focus{
+    border: 0.5px solid rgb(26, 157, 209);
+    color:#d9d6d6
+}
+
+.modal-dialog > .modal-content > .modal-header > button {
+    color: #fff !important; 
+    opacity: 1 !important;
+}
+
+.tokenlogo{
+    margin-right: 15px;
+}
+.tokenName{
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.tokenSymbol{
+    padding: 0;
+    margin-left:11.5%;
+    font-weight:bolder;
+    color:#cccbd0;
+    font-size:14px;
+    width: 62px;
+    height: 20px;
+}
+
+.currInput{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
 }

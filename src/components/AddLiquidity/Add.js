@@ -1,8 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-// import HelpIcon from '../HelpIcon/HelpIcon';
-// import ButtonGroup from '../TradeLiquidityBtn/ButtonGroup';
+import React, { useContext, useEffect, useState } from 'react'
 import "./AddLiquidity.css";
-// import {NavLink} from 'react-router-dom';
 import { Button, Modal, ListGroup } from "react-bootstrap";
 import Tokens from "../TokenList";
 import pair from "../../contracts/pair.json";
@@ -12,9 +9,13 @@ import dataContext from "../ContextData";
 import EthTokens from '../EthTokenList';
 import MaticTokens from "../MaticTokenList";
 import FTMTokens from "../FantomTokenList";
+import timeIcon from '../../Assets/time-history.png';
+import exchangeIcon from '../../Assets/exchange-icon.png'
+import btIcon from '../../Assets/bt-logo.png';
+import ethIcon from '../../Assets/eth.png'
 
-function AddLiquidity() {
-  const [show, setShow] = useState(false);
+function Add() {
+    const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [selectedToken, setSelectedToken] = useState(null);
   const [selectedToken2, setSelectedToken2] = useState(null);
@@ -133,44 +134,24 @@ function AddLiquidity() {
 
     },[])
 
-  // useEffect(() => {
-  
-    
-  // }, []);
   return (
-    <div className="add_liquidity_page">
- 
-      <div className="add__box">
-        <div className="add__liquidity">
-          <div className="liquidity__navbar">
-            {/* <NavLink activeClassName='active-link' to='/liquidity' > */}
-            <div className="liquidity__nav_1 col-2">
-              {/* <span className="back__icon">
-                <i class="fas fa-chevron-left"></i>
-              </span> */}
+    <div className='container-fluid AddPage '>
+        <div className='row'>
+          
+        <div className='col-lg-2 col-md-2'></div>
+        <div className='col-lg-8 col-md-8 col-12'>
+        <div class="card addLiqCard">
+            <div>
+  <h5 class="card-header liq-card-header text-center">LIQUIDITY POOL <span className="liq_nav__time">
+                <img src={timeIcon} className="net" />
+                </span></h5>
             </div>
-            {/* </NavLink> */}
-            <div className="liquidity__nav_2 col-6">
-              <span className="liq_nav__title">Add Liquidity</span>
-            </div>
-            <div className="liquidity__nav_3 col-4">
-              <span className="nav__settings">
-                <i class="fas fa-cog"></i>
-              </span>
-              <span className="nav__time">
-                <i class="far fa-clock"></i>
-              </span>
-            </div>
-          </div>
-          <span className="liq__tagline">
-            Add liquidity to receive LP tokens{" "}
-            <i class="far fa-question-circle"></i>
-          </span>
-          <hr className="buy__line"></hr>
-          <div className="trade__input">
+  <div class="card-body">
+    
+  <div className="trade__input">
             <div className="icon__title">
               {/* <img className="inp__icon__1" src="bootomlogo.svg"></img> */}
-              <span className="input_title">Input</span> 
+              <span className="liq_input_title">Input</span> 
              
               <TokenSelect
                 modalType={"pair1"}
@@ -199,26 +180,28 @@ function AddLiquidity() {
             </span>
             <span className="tokenBalance">{selectedToken ? balance : ""}</span>
             <input
-              className="inp__1"
+              className="liqinp__1"
               type="text"
               placeholder="0.00"
               value={updatePrice1}
               onChange={(e) => pairAddress ? dynamicPrice(e) : setUpdatePrice1(e.target.value)}
             />
-             <Button onClick={() => setShow(true)} className="inp__title__1">
+             <img src={btIcon} className='selectTokenIcon1' alt='selectTokenIcon'/>
+            <span className='selectTokenName1'>BT Swap</span>
+             <Button onClick={() => setShow(true)} className="liqinp__title__1">
                 
                 <span className="inp__choose__1">
                   <i class="fas fa-chevron-down"></i>
                 </span>
               </Button>
           </div>
-          <div className="ex-icon">
-            <img src="plus.svg" className="plus-icon" />
+          <div className="liq-ex-icon">
+          <img src={exchangeIcon} className="net" />
           </div>
           <div className="trade__input__2">
             <div className="icon__title">
               {/* <img className="inp__icon__1" src="bootomlogo.svg"></img> */}
-              <span className="input_title">Input</span> 
+              <span className="liq_input_title">Input</span> 
               
               {/* <span className='tokenBalance'>Select Tokens other than BNB</span> */}
               <TokenSelect
@@ -252,23 +235,33 @@ function AddLiquidity() {
               {selectedToken2 ? selectedToken2.symbol : ""}
             </span>
             <span className="tokenBalance">
-              {selectedToken2 ? balance2 : ""}
+              {selectedToken2 ? balance2 : ""} 
             </span>
             <input
-              className="inp__1"
+              className="liqinp__1"
               type="text"
               value={ updatePrice2}
               placeholder="0.00"
               onChange={(e) => pairAddress ? dynamicPrice2(e) : setUpdatePrice2(e.target.value)}
             />
-            <Button onClick={() => setShow2(true)} className="inp__title__2">
-               
+            <img src={ethIcon} className='selectTokenIcon2' alt='selectTokenIcon'/>
+            <span className='selectTokenName2'>ETH</span>
+            <Button onClick={() => setShow2(true)} className="liqinp__title__2">
                 <span className="inp__choose__1">
                   <i class="fas fa-chevron-down"></i>
                 </span>
               </Button>
           </div>
-
+<div className=' row Transaction_metadat_container'>
+    <div className='col-lg-6 col-6 meta_left'>
+        <span>7381.078 eth per bt swap</span>
+        <span>0.000738 bt swap per eth</span>
+        </div>
+    <div className='col-lg-6 col-6  meta_right'>
+    <span>0%</span>
+        <span>share of pool</span>
+        </div>
+    </div>
           {pairAddress ? (
             ""
           ) : (
@@ -283,11 +276,13 @@ function AddLiquidity() {
           <button className="supply__btn" onClick={supplyHandler}>
             Supply
           </button>
+  </div>
+</div>
+            </div>
+        <div className='col-lg-2 col-md-2'></div>
         </div>
-      </div>
-     
-    </div>
-  );
+        </div>
+  )
 }
 
-export default AddLiquidity;
+export default Add
