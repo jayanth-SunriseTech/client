@@ -14,7 +14,75 @@ import TokenSelect from '../AddLiquidity/TokenSelect';
 import { Button } from 'react-bootstrap';
 import {useSelector} from 'react-redux';
 import { useEffect } from "react";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 // import Connect from "../Connect/Connect";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+export const options = {
+  scales: {
+    xAxes: [{
+        gridLines: {
+            color: "rgba(0, 0, 0, 0)",
+        }
+    }],
+    yAxes: [{
+        gridLines: {
+            color: "rgba(0, 0, 0, 0)",
+        }   
+    }]
+},
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top' ,
+    },
+    title: {
+      display: true,
+      
+    },
+  },
+};
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data:['100', '200', '400', '420', '600', '700', '920'] ,
+      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Dataset 2',
+      data: ['200', '150', '900', '700', '200', '420', '100'] ,
+      borderColor: 'rgb(53, 162, 235)',
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
 
 function TradeExchange() {
 
@@ -100,7 +168,11 @@ console.log(tokenInstance);
                 </div>
               </div>
             </div>
-          </div></div>
+            <div className="row graphRow">
+            <Line options={options} data={data} />;
+              </div>
+          </div>
+          </div>
         <div className="col-lg-5">
         <div className="buy">
             <div className="buy__navbar">
