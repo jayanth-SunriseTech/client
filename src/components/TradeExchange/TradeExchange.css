@@ -85,7 +85,7 @@ height: 0px;
   border-radius: 10px;
   position: absolute;
   width: 732px !important;
-  height: 482px;
+  height: 500px;
   left: 201px;
   top: 180px;
 }
@@ -94,8 +94,8 @@ height: 0px;
   background: rgba(0, 209, 255, 0.1);
   border-radius: 10px; 
   position: absolute;
-  width: 500px;
-  height: 482px;
+  width: 510px;
+  height: 500px;
   left: 973px;
   top: 180px;
   -webkit-filter: blur(0.3px);
@@ -111,8 +111,10 @@ height: 0px;
 }
 
 .net {
+  z-index: 999;
   width: 50px !important;
   height: 50px !important;
+  cursor: pointer;
 }
 
 .nav__title {
@@ -184,7 +186,8 @@ hr {
   color: #fff;
   margin-left: 8%;
 }
-.inp__title__1 {
+
+.swapinp__title__1 {
   width: 40px;
   height: 50px;
   text-align: center;
@@ -199,10 +202,10 @@ hr {
   font-size: 20px;
   padding-right: -9%;
   position: absolute;
-  top: 32%;
+  top: 35.5%;
   left: 85%;
 }
-.inp__title__2 {
+.swapinp__title__2 {
   width: 40px;
   height: 50px;
   text-align: center;
@@ -217,7 +220,7 @@ hr {
   font-size: 20px;
   padding-right: -9%;
   position: absolute;
-  top: 60%;
+  top: 61%;
   left: 86%;
 }
 
@@ -253,12 +256,25 @@ hr {
    padding: 20px;
 }
 
-.ex-icon {
+.swapex-icon {
+  left: 45%;
   display: flex;
   justify-content: end;
-  margin-right: 232px;
+  position: absolute;
+  top: 45%;
   height: 20px;
-  margin-top: -15px;
+}
+.ex-icon {
+  left: 45%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 41%;
+  height: 20px;
+}
+.icon__title {
+  padding-top: 2%;
+  padding-bottom: 3%;
 }
 
 .trade__wallet {

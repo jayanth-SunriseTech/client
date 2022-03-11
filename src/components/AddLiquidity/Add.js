@@ -37,6 +37,8 @@ function Add() {
   const[ethList,setEthList] = useState([]);
   const[maticList,setMaticList] = useState([]);
   const[fantomList,setFantomList] = useState([]);
+  const[selectedTokenName,setSelectedTokenName] =useState(null);
+  const[swapTokenPrice,setSwapTokenPrice] = useState(null);
 
   const data = useContext(dataContext);
   const wallet = useSelector((state) => state.WalletConnect);
@@ -67,13 +69,10 @@ function Add() {
 
   const supplyHandler = async () => {
     console.log(network);
-    alert(typeof convertedPrice);
+    alert(typeof convertedPrice); 
     const time = Math.floor(Date.now() / 1000) + 300;
     const BnbEth = wallet.web3.utils.toWei(BnbValue, "ether");
-    const TokenAmountEth = wallet.web3.utils.toWei(
-      convertedPrice.toString(),
-      "ether"
-    );
+    const TokenAmountEth = wallet.web3.utils.toWei(TokenAmount,"ether");
     console.log(TokenAmountEth);
     console.log(BnbEth);
 
@@ -132,7 +131,7 @@ function Add() {
     setMaticList(JSON.parse(window.localStorage.getItem('matic')))
   }
 
-    },[])
+    },[selectedTokenName])
 
   return (
     <div className='container-fluid AddPage '>
@@ -173,6 +172,9 @@ function Add() {
                 setEthList={setEthList}
                 setMaticList={setMaticList}
                 setFantomList={setFantomList}
+                selectedTokenName={selectedTokenName}
+                setSelectedTokenName={setSelectedTokenName}
+                setSwapTokenPrice={setSwapTokenPrice}
               />
             </div>
             <span className="tokenSelected">
@@ -184,10 +186,10 @@ function Add() {
               type="text"
               placeholder="0.00"
               value={updatePrice1}
-              onChange={(e) => pairAddress ? dynamicPrice(e) : setUpdatePrice1(e.target.value)}
+              onChange={(e) => {pairAddress ? dynamicPrice(e) : setUpdatePrice1(e.target.value);setBnbValue((e.target.value))}}
             />
-             <img src={btIcon} className='selectTokenIcon1' alt='selectTokenIcon'/>
-            <span className='selectTokenName1'>BT Swap</span>
+             {/* <img src={btIcon} className='selectTokenIcon1' alt='selectTokenIcon'/> */}
+            <span className='selectTokenName1'>{selectedToken ? selectedToken.name : ""}</span>
              <Button onClick={() => setShow(true)} className="liqinp__title__1">
                 
                 <span className="inp__choose__1">
@@ -229,6 +231,9 @@ function Add() {
                 setEthList={setEthList}
                 setMaticList={setMaticList}
                 setFantomList={setFantomList}
+                selectedTokenName={selectedTokenName}
+                setSelectedTokenName={setSelectedTokenName}
+                setSwapTokenPrice={setSwapTokenPrice}
               />
             </div>
             <span className="tokenSelected">
@@ -242,10 +247,10 @@ function Add() {
               type="text"
               value={ updatePrice2}
               placeholder="0.00"
-              onChange={(e) => pairAddress ? dynamicPrice2(e) : setUpdatePrice2(e.target.value)}
+              onChange={(e) => {pairAddress ? dynamicPrice2(e) : setUpdatePrice2(e.target.value);setTokenAmount(e.target.value)}}
             />
-            <img src={ethIcon} className='selectTokenIcon2' alt='selectTokenIcon'/>
-            <span className='selectTokenName2'>ETH</span>
+            {/* <img src={ethIcon} className='selectTokenIcon2' alt='selectTokenIcon'/> */}
+            <span className='selectTokenName2'>{selectedTokenName ? selectedTokenName : ""}</span>
             <Button onClick={() => setShow2(true)} className="liqinp__title__2">
                 <span className="inp__choose__1">
                   <i class="fas fa-chevron-down"></i>

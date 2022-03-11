@@ -35,7 +35,10 @@ function TokenSelect({
   setBnbList,
   setEthList,
   setMaticList,
-  setFantomList
+  setFantomList,
+  selectedTokenName,
+  setSelectedTokenName,
+  setSwapTokenPrice,
 }) {
   const data = useContext(dataContext);
   const wallet = useSelector((state) => state.WalletConnect);
@@ -47,6 +50,7 @@ function TokenSelect({
 
   const [pushAray, setPushArray] = useState([]);
   const { networkId, factory } = network;
+  console.log(factory)
   let { tokenAddress1, tokenAddress2 } = network;
   // const dispatch = useDispatch();
 
@@ -85,14 +89,14 @@ function TokenSelect({
    
   };
   // console.log(JSON.parse(window.localStorage.getItem({currentArray})));
-  const handleTokenAddress = async () => {
-    const TokenSearch = new wallet.web3.eth.Contract(token, searchToken);
-    const name = await TokenSearch.methods.name().call();
-    const Symbol = await TokenSearch.methods.symbol().call();
-    const Balance = await TokenSearch.methods.balanceOf(wallet.address).call();
-    setTokenName(name);
-    setTokenSymbol(Symbol);
-  };
+  // const handleTokenAddress = async () => {
+  //   const TokenSearch = new wallet.web3.eth.Contract(token, searchToken);
+  //   const name = await TokenSearch.methods.name().call();
+  //   const Symbol = await TokenSearch.methods.symbol().call();
+  //   const Balance = await TokenSearch.methods.balanceOf(wallet.address).call();
+  //   setTokenName(name);
+  //   setTokenSymbol(Symbol);
+  // };
   const handleSelectedToken = async (e) => {
     setTokenAddress(e.address);
     if (modalType === "pair1") {
@@ -104,6 +108,7 @@ function TokenSelect({
       setSelectedToken2(e);
       setSelectedTokAddress2(e.address);
       data.setTok2(e.address);
+      setSelectedTokenName(e.name)
       setShow(false)
 
       const pairExist = await factory.methods
@@ -125,6 +130,9 @@ function TokenSelect({
         console.log(tokePrice1);
         console.log(tokePrice2);
         const price = tokePrice1 / tokePrice2;
+        const swapPrice = tokePrice2/tokePrice1;
+        console.log(swapPrice)
+        setSwapTokenPrice(swapPrice)
         setCurrentPairPrice(price);
       }
     }

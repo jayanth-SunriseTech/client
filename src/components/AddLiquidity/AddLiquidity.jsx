@@ -22,15 +22,15 @@ function AddLiquidity() {
   const [balance2, setBalance2] = useState(0);
   const [tokenInstance, setTokenInstance] = useState(null);
   const [tokenAddress, setTokenAddress] = useState(null);
-  const [BnbValue, setBnbValue] = useState("");
-  const [TokenAmount, setTokenAmount] = useState("");
+  const [BnbValue, setBnbValue] = useState(null);
+  const [TokenAmount, setTokenAmount] = useState(null);
   const [selectedTokAddress1, setSelectedTokAddress1] = useState(null);
   const [selectedTokAddress2, setSelectedTokAddress2] = useState(null);
   const [pairAddress, setPairAddress] = useState(true);
-  const [pairAddValue, setPairAddValue] = useState("");
-  const [convertedPrice, setconvertedPrice] = useState("");
-  const [updatePrice1, setUpdatePrice1] = useState("");
-  const [updatePrice2, setUpdatePrice2] = useState("");
+  const [pairAddValue, setPairAddValue] = useState(null);
+  const [convertedPrice, setconvertedPrice] = useState(null);
+  const [updatePrice1, setUpdatePrice1] = useState(null);
+  const [updatePrice2, setUpdatePrice2] = useState(null);
   const [currentPairPrice,setCurrentPairPrice] = useState(null)
   const[bnbList,setBnbList] = useState([]);
   const[ethList,setEthList] = useState([]);
@@ -46,6 +46,7 @@ function AddLiquidity() {
   console.log(data.pairContractAddress);
   const handleApprove = async () => {
     const RouterAddress = router._address;
+    console.log(RouterAddress)
 
     const res = await tokenInstance.methods
       .approve(RouterAddress, wallet.web3.utils.toWei(TokenAmount, "ether"))
@@ -69,10 +70,7 @@ function AddLiquidity() {
     alert(typeof convertedPrice);
     const time = Math.floor(Date.now() / 1000) + 300;
     const BnbEth = wallet.web3.utils.toWei(BnbValue, "ether");
-    const TokenAmountEth = wallet.web3.utils.toWei(
-      convertedPrice.toString(),
-      "ether"
-    );
+    const TokenAmountEth = wallet.web3.utils.toWei(convertedPrice,"ether");
     console.log(TokenAmountEth);
     console.log(BnbEth);
 
@@ -203,7 +201,7 @@ function AddLiquidity() {
               type="text"
               placeholder="0.00"
               value={updatePrice1}
-              onChange={(e) => pairAddress ? dynamicPrice(e) : setUpdatePrice1(e.target.value)}
+              onChange={(e) => {pairAddress ? dynamicPrice(e) : setUpdatePrice1(e.target.value);setBnbValue((e.target.value))}}
             />
              <Button onClick={() => setShow(true)} className="inp__title__1">
                 
@@ -248,10 +246,10 @@ function AddLiquidity() {
                 setFantomList={setFantomList}
               />
             </div>
-            <span className="tokenSelected">
+            <span className="tokenSelected2">
               {selectedToken2 ? selectedToken2.symbol : ""}
             </span>
-            <span className="tokenBalance">
+            <span className="tokenBalance2">
               {selectedToken2 ? balance2 : ""}
             </span>
             <input
@@ -259,7 +257,7 @@ function AddLiquidity() {
               type="text"
               value={ updatePrice2}
               placeholder="0.00"
-              onChange={(e) => pairAddress ? dynamicPrice2(e) : setUpdatePrice2(e.target.value)}
+              onChange={(e) => {pairAddress ? dynamicPrice2(e) : setUpdatePrice2(e.target.value);setTokenAmount(e.target.value)}}
             />
             <Button onClick={() => setShow2(true)} className="inp__title__2">
                
@@ -280,9 +278,10 @@ function AddLiquidity() {
           )}
 
           {/* <button className="trade__wallet" onClick={() => getPrice()}>Get Price</button> */}
-          <button className="supply__btn" onClick={supplyHandler}>
+          {!pairAddress ? (""): ( <button className="supply__btn" onClick={supplyHandler}>
             Supply
-          </button>
+          </button>)}
+         
         </div>
       </div>
      

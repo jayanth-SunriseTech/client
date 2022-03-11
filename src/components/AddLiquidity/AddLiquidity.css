@@ -120,11 +120,7 @@ margin-top: -2px;
     height: 7px !important;
 }
 
-.inp__title__1{
-    background: none !important;
-    border: none !important;
-    outline: none !important;
-}
+
 
 .inp__title__1:hover{
     background: none !important;
@@ -142,6 +138,74 @@ margin-top: -2px;
 }
 
 .tokenSelected,.tokenBalance{
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.6;
+}
+.tokenSelected2,.tokenBalance2{
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+.tokenSelected {
+    left: 19%;
+    position: absolute;
+    top: 19.5%;
+    color: #ffffff;
+}
+.tokenBalance{
+    left: 26%;
+    position: absolute;
+    top: 26.5%;
+    color: #ffffff;
+}
+.tokenSelected2{
+    left: 19%;
+    position: absolute;
+    top: 57.5%;
+    color: #ffffff;
+}
+.tokenBalance2{
+    left: 26%;
+    position: absolute;
+    top: 57.5%;
+    color: #ffffff;
+}
+
+.swaptokenSelected,.swaptokenBalance{
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.6;
+}
+.swaptokenSelected2,.swaptokenBalance2{
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+.swaptokenSelected{
+    left: 19%;
+    position: absolute;
+    top: 26.5%;
+    color: #ffffff;
+}
+.swaptokenBalance{
+    left: 26%;
+    position: absolute;
+    top: 26.5%;
+    color: #ffffff;
+}
+.swaptokenSelected2 {
+    left: 26%;
+    position: absolute;
+    top: 57.5%;
+    color: #ffffff;
+}
+.swaptokenBalance2 {
+    left: 40%;
+    position: absolute;
+    top: 57.5%;
     color: #ffffff;
 }
 
@@ -233,7 +297,7 @@ height: 70px;
     font-size: 20px;
     padding-right: -9%;
     position: absolute;
-    top:19.5% ;
+    top:24.5% ;
     left:90%;
   }
 
@@ -252,7 +316,7 @@ height: 70px;
     font-size: 20px;
     padding-right: -9%;
     position: absolute;
-    top:48.5% ;
+    top:53.5% ;
     left:90%;
   }
   
